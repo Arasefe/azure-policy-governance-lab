@@ -2,7 +2,7 @@
 # terraform.tfvars itself is gitignored — this .example file is the one that
 # gets committed, so the real values a person fills in never leak into git.
 
-subscription_id    = "bed57e13-0da5-4dae-a845-4cabdea1362e" # cavalry-prod
+subscription_id    = "00000000-0000-0000-0000-000000000000" # replace with your subscription's GUID
 approved_location  = "eastus"
 approved_vm_skus   = ["Standard_B1s", "Standard_B2s"]
 identity_location  = "eastus"

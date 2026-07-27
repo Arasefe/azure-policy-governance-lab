@@ -1,11 +1,11 @@
 variable "subscription_id" {
-  description = "Subscription to assign all six governance policies to (cavalry-prod)."
+  description = "Subscription to assign all six governance policies to. Replace the placeholder default with your own subscription's GUID (or set it via terraform.tfvars / -var)."
   type        = string
-  default     = "bed57e13-0da5-4dae-a845-4cabdea1362e"
+  default     = "00000000-0000-0000-0000-000000000000"
 
   validation {
     condition     = can(regex("^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$", var.subscription_id))
-    error_message = "subscription_id must be a bare GUID (e.g. bed57e13-0da5-4dae-a845-4cabdea1362e), not a full resource ID."
+    error_message = "subscription_id must be a bare GUID (e.g. 00000000-0000-0000-0000-000000000000), not a full resource ID."
   }
 }
 
