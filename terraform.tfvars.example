@@ -1,0 +1,10 @@
+# Copy this file to terraform.tfvars and adjust as needed.
+# terraform.tfvars itself is gitignored — this .example file is the one that
+# gets committed, so the real values a person fills in never leak into git.
+
+subscription_id    = "bed57e13-0da5-4dae-a845-4cabdea1362e" # cavalry-prod
+approved_location  = "eastus"
+approved_vm_skus   = ["Standard_B1s", "Standard_B2s"]
+identity_location  = "eastus"
+
+ama_role_propagation_wait = "30s"
