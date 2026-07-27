@@ -1,5 +1,7 @@
 # Policy Governance Lab — Terraform
 
+[![Terraform Test](https://github.com/Arasefe/azure-policy-governance-lab/actions/workflows/terraform-test.yml/badge.svg)](https://github.com/Arasefe/azure-policy-governance-lab/actions/workflows/terraform-test.yml)
+
 Terraform implementation of the six Azure Policy assignments from
 `4. Enforcing-Cloud-Governance-and-Security-Posture-via-Azure-Policy.html`
 (E1–E6), against the `cavalry-prod` subscription. Every definition ID, effect,
@@ -75,6 +77,11 @@ as the portal-based steps in the HTML lab.
 ```bash
 terraform test
 ```
+
+`.github/workflows/terraform-test.yml` runs `fmt -check`, `validate`, and
+`test` on every push and pull request against `main` — no Azure credentials
+are configured or needed for that workflow, since every run below is fully
+mocked.
 
 All three test files use `mock_provider` (Terraform >= 1.7's native test
 mocking) for both `azurerm` and `time` — nothing here calls out to Azure, so
